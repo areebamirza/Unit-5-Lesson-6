@@ -40,6 +40,37 @@ class Main {
     System.out.println("\nAre the books equal? " + b.equals(a));
     System.out.println("\nAre the books equal? " + b.equals(b2));
 
+    System.out.println();
+
+    Book def1 = new Book();
+    Book def2 = new Book();
+
+    System.out.println("This is Default Book 1:\n" + def1);
+    System.out.println("\nThis is Default Book 2:\n" + def2);
+    System.out.println("\nAre the default books equal? " + def1.equals(def2));
+
+
+    //Create Library
+    Library lib = new Library();
+    System.out.println(lib);
+
+    //add books to our library
+    lib.addBooks(b);
+    lib.addBooks(b2);
+    lib.addBooks(a);
+    lib.addBooks(def1);
+    lib.addBooks(def2);
+
+    System.out.println(lib);
+
+    lib.addBooks(b);
+    lib.addBooks(b2);
+    lib.addBooks(a);
+    lib.addBooks(def1);
+    lib.addBooks(def2);
+
+    System.out.println(lib);
+
   }
 
 }
