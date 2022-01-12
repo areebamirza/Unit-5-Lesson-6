@@ -12,10 +12,8 @@ class Main {
     Book b = new Book("I am Malala", "Malala Yousafzai", 2013, 288, true);
     System.out.println(b);
     
-    System.out.println();
-    
     Book a = new Book("The Secret Garden", "Frances Hodgson Burnett", 1911, 375, false);
-    System.out.println(a);
+    System.out.println("\n" + a);
 
     System.out.println("\nNumber of pages in \"The Secret Garden\": " + a.getNumPages());
     System.out.println("Is \"I Am Malala\" hardcover: " + b.getHardCover());
@@ -24,15 +22,13 @@ class Main {
     int np = scan.nextInt();
     b.setNumPages(np);
 
-    System.out.println();
-    System.out.println(b);
+    System.out.println("\n" + b);
 
     System.out.println("\nChange the author for \"The Secret Garden\":");
     String auth = scan2.nextLine();
     a.setAuthor(auth);
 
-    System.out.println();
-    System.out.println(a);
+    System.out.println("\n" + a);
 
     Book b2 = new Book("I am Malala", "Malala", 2012, 280, false);
 
@@ -40,14 +36,12 @@ class Main {
     System.out.println("\nAre the books equal? " + b.equals(a));
     System.out.println("\nAre the books equal? " + b.equals(b2));
 
-    System.out.println();
-
     Book def1 = new Book();
     Book def2 = new Book();
 
-    System.out.println("This is Default Book 1:\n" + def1);
+    System.out.println("\nThis is Default Book 1:\n" + def1);
     System.out.println("\nThis is Default Book 2:\n" + def2);
-    System.out.println("\nAre the default books equal? " + def1.equals(def2));
+    System.out.println("\nAre the default books equal? " + def1.equals(def2) + "\n\n\n");
 
 
     //Create Library
@@ -60,15 +54,17 @@ class Main {
     lib.addBooks(a);
     lib.addBooks(def1);
     lib.addBooks(def2);
-
-    System.out.println(lib);
-
     lib.addBooks(b);
     lib.addBooks(b2);
     lib.addBooks(a);
     lib.addBooks(def1);
     lib.addBooks(def2);
 
+    System.out.println("Increasing size of array\n\n");
+    lib.increaseSize();
+    System.out.println(lib);
+
+    lib.addBooks(def2);
     System.out.println(lib);
 
   }
